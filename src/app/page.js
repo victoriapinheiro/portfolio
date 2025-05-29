@@ -1,95 +1,133 @@
+'use client';
+import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
+import icon_wpp from "./assets/icon-whatsapp.png";
+import icon_linkedin from "./assets/icon-linkedin.png";
+import icon_cv from "./assets/icon-cv.png";
+import Tecnologias from "@/components/Tecnologias";
+import projetoimg1 from "@/app/assets/projetos/img1.jpeg";
+import projetoimg2 from "@/app/assets/projetos/img2.jpeg";
+import projetoimg3 from "@/app/assets/projetos/img3.jpeg";
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  const [tabAtiva, setTabAtiva] = useState('');
+
+  function alterarTabAtiva (idTab) {
+    if (tabAtiva !== idTab) {
+      setTabAtiva(idTab);
+    }
+    else {
+      setTabAtiva('');
+    }
+  };
+
+  return (
+    <main>
+      <section className={styles.secaosobre}>
+        <article>
+          <Link href="#"><Image className={`${styles.iconlink} ${styles.wpplink}`} src={icon_wpp}></Image></Link>
+          <Link href="#">
+            <Image className={`${styles.iconlink} ${styles.linkedinlink}`} src={icon_linkedin}></Image>
+          </Link>
+          <Link href="#">
+            <Image className={`${styles.iconlink} ${styles.cvlink}`} src={icon_cv}></Image>
+          </Link>
+          <h1>QUEM SOU EU?</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, placerat non dapibus eu, viverra ultrices nunc. Donec tempus varius dui, vel aliquet purus laoreet sed. Praesent laoreet leo et nisi consectetur luctus.</p>
+          <div className={styles.avatar}>
+            
+          </div>
+            
+        </article>
+      </section>
+      <section>
+        <Tecnologias />
+      </section>
+      <div className={styles.linebottom}></div>
+      <section id="projetos" className={styles.secaoprojetos}>
+        <article>
+          <h2>PROJETOS</h2>
+          <p className={styles.descricao}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula, neque sit amet placerat volutpat, lacus turpis lacinia mauris, vitae varius risus enim et neque. Sed sed interdum eros, ac.</p>
+          <div className={styles.projetosdestaquecontainer}>
+            <div className={styles.projetosdestaque}>
+              <button className={tabAtiva === 'Tab1' && (styles.btnativo)} onClick={() => alterarTabAtiva('Tab1')}><Image src={projetoimg1}></Image></button>
+              <button className={tabAtiva === 'Tab2' && (styles.btnativo)} onClick={() => alterarTabAtiva('Tab2')}><Image src={projetoimg2}></Image></button>
+              <button className={tabAtiva === 'Tab3' && (styles.btnativo)} onClick={() => alterarTabAtiva('Tab3')}><Image src={projetoimg3}></Image></button>
+            </div>
+            {tabAtiva === 'Tab1' && (
+              <div className={styles.containertab}>
+                <div className={styles.containertabcontent}>
+                  <h3>Nome do Projeto 1</h3>
+                  <p><span>Link do projeto:</span></p>
+                  <p><span>Código no GitHub:</span></p>
+                  <p><span>Descrição:</span></p>
+                  <p><span>Tecnologias utilizadas:</span></p>
+                </div>
+              </div>
+            )}
+            {tabAtiva === 'Tab2' && (
+              <div className={styles.containertab}>
+                <div className={styles.containertabcontent}>
+                  <h3>Nome do Projeto 2</h3>
+                  <p><span>Link do projeto:</span></p>
+                  <p><span>Código no GitHub:</span></p>
+                  <p><span>Descrição:</span></p>
+                  <p><span>Tecnologias utilizadas:</span></p>
+                </div>
+              </div>
+            )}
+            {tabAtiva === 'Tab3' && (
+              <div className={styles.containertab}>
+               <div className={styles.containertabcontent}>
+                  <h3>Nome do Projeto 3</h3>
+                  <p><span>Link do projeto:</span></p>
+                  <p><span>Código no GitHub:</span></p>
+                  <p><span>Descrição:</span></p>
+                  <p><span>Tecnologias utilizadas:</span></p>
+                </div>
+              </div>
+            )}
+          </div>
+          
+          {/* {tabAtiva === 'Tab1' && (
+            <div className={styles.containertab}>
+              <div className={styles.containertabcontent}>
+                <h3>Nome do Projeto 1</h3>
+                <p><span>Link do projeto:</span></p>
+                <p><span>Código no GitHub:</span></p>
+                <p><span>Descrição:</span></p>
+                <p><span>Tecnologias utilizadas:</span></p>
+              </div>
+            </div>
+          )}
+          {tabAtiva === 'Tab2' && (
+            <div className={styles.containertab}>
+              <div className={styles.containertabcontent}>
+                <h3>Nome do Projeto 2</h3>
+                <p><span>Link do projeto:</span></p>
+                <p><span>Código no GitHub:</span></p>
+                <p><span>Descrição:</span></p>
+                <p><span>Tecnologias utilizadas:</span></p>
+              </div>
+            </div>
+          )}
+          {tabAtiva === 'Tab3' && (
+            <div className={styles.containertab}>
+              <div className={styles.containertabcontent}>
+                <h3>Nome do Projeto 3</h3>
+                <p><span>Link do projeto:</span></p>
+                <p><span>Código no GitHub:</span></p>
+                <p><span>Descrição:</span></p>
+                <p><span>Tecnologias utilizadas:</span></p>
+              </div>
+            </div>
+          )} */}
+          <Link className={styles.secaoprojetosbtn} href="#">Ver mais</Link>
+        </article>
+      </section>
+    </main>
   );
 }

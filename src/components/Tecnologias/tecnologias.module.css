@@ -1,0 +1,33 @@
+.tecnologias {
+    height: 50px;
+    max-width: 80vw;
+    margin-inline: auto;
+    overflow: hidden;
+    -webkit-mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+    /* border: 3px solid lime; */
+    margin-bottom: 13px;
+    padding-block: 3px;
+}
+
+.scroller__inner {
+    /* border: 1px solid red; */
+    height: 100%;
+    width: max-content;
+    animation: scrollInfinito 20s linear infinite;
+}
+
+.scroller__inner:hover {
+    animation-play-state: paused;
+}
+
+.tecnologias .scroller__inner img {
+    width: auto;
+    height: 100%;
+} 
+
+@keyframes scrollInfinito {
+    to {
+        transform: translate(-50%);
+    }
+}

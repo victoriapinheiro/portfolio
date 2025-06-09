@@ -27,7 +27,7 @@
 }
 
 .secaosobre article .avatar {
-    background-image: url('./assets/vicpng.png');
+    background-image: url('../assets/vicpng.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

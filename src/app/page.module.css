@@ -116,7 +116,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 }
 
 .secaoprojetos .projetosdestaque button {
@@ -126,36 +125,54 @@
     box-shadow: none;
     border-width: 0;
     overflow: hidden;
-}
-
-.secaoprojetos .projetosdestaque button {
     cursor: pointer;
 }
 
-.secaoprojetos .projetosdestaque button img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+.secaoprojetos .projetosdestaque button {
+    background-position: center;
+    background-size: cover;
     filter: grayscale(100%);
     transition: filter 0.3s linear;
 }
 
-.secaoprojetos .projetosdestaque button img:hover {
+.secaoprojetos .projetosdestaque .btnprojeto1 {
+    background-image: url("assets/projetos/img1.jpeg");
+}
+
+.secaoprojetos .projetosdestaque .btnprojeto2 {
+    background-image: url("assets/projetos/img2.jpeg");
+}
+
+.secaoprojetos .projetosdestaque .btnprojeto3 {
+    background-image: url("assets/projetos/img3.jpeg");
+}
+
+.secaoprojetos .projetosdestaque button:hover {
     filter: grayscale(0%);
-    transition: all 0.3s linear;
+    transition: filter 0.3s linear;
 }
 
 .btnativo {
+    filter: grayscale(0%) !important;
     border: 4px solid #aa527c !important;
     border-bottom-left-radius: 0 !important;
     border-bottom-right-radius: 0 !important;
-    width: 315px !important;
-    height: 315px !important;
+    /* width: 315px !important; */
+    height: 308px !important;
 }
 
-.btnativo img {
-    filter: grayscale(0%) !important;
-}
+/* .btnativo .bordainferior {
+    width: 100%;
+    height: 30px;
+    background-color: #54f5d8;
+} */
+
+/* .bordainferior {
+    background-color: #54f5d8;
+    width: 100%;
+    height: 4px;
+    display: inline
+} */
 
 .secaoprojetos .secaoprojetosbtn {
     font-family: "Montserrat", sans-serif;

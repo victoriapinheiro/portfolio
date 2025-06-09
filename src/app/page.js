@@ -53,9 +53,11 @@ export default function Home() {
           <p className={styles.descricao}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula, neque sit amet placerat volutpat, lacus turpis lacinia mauris, vitae varius risus enim et neque. Sed sed interdum eros, ac.</p>
           <div className={styles.projetosdestaquecontainer}>
             <div className={styles.projetosdestaque}>
-              <button className={tabAtiva === 'Tab1' && (styles.btnativo)} onClick={() => alterarTabAtiva('Tab1')}><Image src={projetoimg1}></Image></button>
-              <button className={tabAtiva === 'Tab2' && (styles.btnativo)} onClick={() => alterarTabAtiva('Tab2')}><Image src={projetoimg2}></Image></button>
-              <button className={tabAtiva === 'Tab3' && (styles.btnativo)} onClick={() => alterarTabAtiva('Tab3')}><Image src={projetoimg3}></Image></button>
+              <button className={`${styles.btnprojeto1} ${tabAtiva === 'Tab1' && (styles.btnativo)}`} onClick={() => alterarTabAtiva('Tab1')}>
+                <div className={styles.bordainferior}></div>
+              </button>
+              <button className={`${styles.btnprojeto2} ${tabAtiva === 'Tab2' && (styles.btnativo)}`} onClick={() => alterarTabAtiva('Tab2')}></button>
+              <button className={`${styles.btnprojeto3} ${tabAtiva === 'Tab3' && (styles.btnativo)}`} onClick={() => alterarTabAtiva('Tab3')}></button>
             </div>
             {tabAtiva === 'Tab1' && (
               <div className={styles.containertab}>
@@ -91,40 +93,6 @@ export default function Home() {
               </div>
             )}
           </div>
-          
-          {/* {tabAtiva === 'Tab1' && (
-            <div className={styles.containertab}>
-              <div className={styles.containertabcontent}>
-                <h3>Nome do Projeto 1</h3>
-                <p><span>Link do projeto:</span></p>
-                <p><span>Código no GitHub:</span></p>
-                <p><span>Descrição:</span></p>
-                <p><span>Tecnologias utilizadas:</span></p>
-              </div>
-            </div>
-          )}
-          {tabAtiva === 'Tab2' && (
-            <div className={styles.containertab}>
-              <div className={styles.containertabcontent}>
-                <h3>Nome do Projeto 2</h3>
-                <p><span>Link do projeto:</span></p>
-                <p><span>Código no GitHub:</span></p>
-                <p><span>Descrição:</span></p>
-                <p><span>Tecnologias utilizadas:</span></p>
-              </div>
-            </div>
-          )}
-          {tabAtiva === 'Tab3' && (
-            <div className={styles.containertab}>
-              <div className={styles.containertabcontent}>
-                <h3>Nome do Projeto 3</h3>
-                <p><span>Link do projeto:</span></p>
-                <p><span>Código no GitHub:</span></p>
-                <p><span>Descrição:</span></p>
-                <p><span>Tecnologias utilizadas:</span></p>
-              </div>
-            </div>
-          )} */}
           <Link className={styles.secaoprojetosbtn} href="#">Ver mais</Link>
         </article>
       </section>

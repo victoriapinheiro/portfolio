@@ -7,9 +7,6 @@ import icon_wpp from "./assets/icon-whatsapp.png";
 import icon_linkedin from "./assets/icon-linkedin.png";
 import icon_cv from "./assets/icon-cv.png";
 import Tecnologias from "@/components/Tecnologias";
-import projetoimg1 from "@/app/assets/projetos/img1.jpeg";
-import projetoimg2 from "@/app/assets/projetos/img2.jpeg";
-import projetoimg3 from "@/app/assets/projetos/img3.jpeg";
 
 export default function Home() {
 

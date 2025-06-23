@@ -11,7 +11,7 @@ export default function Footer() {
         <div className={styles.footer}>
           <div className={styles.containerlinks}>
             <Link href="https://www.linkedin.com/in/victoriavivian"><Image src={linkedin_icon}></Image></Link>
-            <Link href="#"><Image src={wpp_icon}></Image></Link>
+            <Link href="https://wa.me/5521972175706" title="+55 (21) 97217-5706"><Image src={wpp_icon}></Image></Link>
             <Link href="mailto:victoriaviviancp@gmail.com" title="victoriaviviancp@gmail.com"><Image src={email_icon}></Image></Link>
           </div>
           <p>Design criado por <Link className={styles.linkspan} href="#">Taylor Miguel</Link></p>

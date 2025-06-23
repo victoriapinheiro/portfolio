@@ -7,6 +7,7 @@ import icon_wpp from "./assets/icon-whatsapp.png";
 import icon_linkedin from "./assets/icon-linkedin.png";
 import icon_cv from "./assets/icon-cv.png";
 import Tecnologias from "@/components/Tecnologias";
+import Cards from "@/components/Cards";
 
 export default function Home() {
 
@@ -25,11 +26,11 @@ export default function Home() {
     <main>
       <section className={styles.secaosobre}>
         <article>
-          <Link href="#"><Image className={`${styles.iconlink} ${styles.wpplink}`} src={icon_wpp}></Image></Link>
+          <Link href="https://wa.me/5521972175706" title="+55 (21) 97217-5706"><Image className={`${styles.iconlink} ${styles.wpplink}`} src={icon_wpp}></Image></Link>
           <Link href="https://www.linkedin.com/in/victoriavivian">
             <Image className={`${styles.iconlink} ${styles.linkedinlink}`} src={icon_linkedin}></Image>
           </Link>
-          <Link href="@/app/assets/doc/curriculo-victoria-vivian.pdf" target="_blank">
+          <Link href="https://drive.google.com/file/d/1vwpzmZbtoa2dTVBdP-TsoL_WDmmktqrU/view?usp=sharing" target="_blank">
             <Image className={`${styles.iconlink} ${styles.cvlink}`} src={icon_cv}></Image>
           </Link>
           <h1>QUEM SOU EU?</h1>
@@ -48,50 +49,7 @@ export default function Home() {
         <article>
           <h2>PROJETOS</h2>
           <p className={styles.descricao}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula, neque sit amet placerat volutpat, lacus turpis lacinia mauris, vitae varius risus enim et neque. Sed sed interdum eros, ac.</p>
-          <div className={styles.projetosdestaquecontainer}>
-            <div className={styles.projetosdestaque}>
-              <div className={styles.btncontainer}>
-                <button className={`${styles.btnprojeto1} ${tabAtiva === 'Tab1' && (styles.btnativo)}`} onClick={() => alterarTabAtiva('Tab1')}>
-                </button>
-                {tabAtiva === 'Tab1' && (<div className={styles.bordainferior}></div>)}                
-              </div>
-              <div className={styles.btncontainer}>
-                <button className={`${styles.btnprojeto2} ${tabAtiva === 'Tab2' && (styles.btnativo)}`} onClick={() => alterarTabAtiva('Tab2')}></button>
-                {tabAtiva === 'Tab2' && (<div className={styles.bordainferior}></div>)}
-              </div>
-              <div className={styles.btncontainer}>
-                <button className={`${styles.btnprojeto3} ${tabAtiva === 'Tab3' && (styles.btnativo)}`} onClick={() => alterarTabAtiva('Tab3')}></button>
-                {tabAtiva === 'Tab3' && (<div className={styles.bordainferior}></div>)}
-              </div>
-            </div>
-            <div className={`${styles.containertab} ${tabAtiva === 'Tab1' && (styles.tabativo)}`}>
-              <div className={styles.containertabcontent}>
-                <h3>Nome do Projeto 1</h3>
-                <p><span>Link do projeto:</span></p>
-                <p><span>Código no GitHub:</span></p>
-                <p><span>Descrição:</span></p>
-                <p><span>Tecnologias utilizadas:</span></p>
-              </div>
-            </div>
-            <div className={`${styles.containertab} ${tabAtiva === 'Tab2' && (styles.tabativo)}`}>
-              <div className={styles.containertabcontent}>
-                <h3>Nome do Projeto 2</h3>
-                <p><span>Link do projeto:</span></p>
-                <p><span>Código no GitHub:</span></p>
-                <p><span>Descrição:</span></p>
-                <p><span>Tecnologias utilizadas:</span></p>
-              </div>
-            </div>
-            <div className={`${styles.containertab} ${tabAtiva === 'Tab3' && (styles.tabativo)}`}>
-              <div className={styles.containertabcontent}>
-                <h3>Nome do Projeto 3</h3>
-                <p><span>Link do projeto:</span></p>
-                <p><span>Código no GitHub:</span></p>
-                <p><span>Descrição:</span></p>
-                <p><span>Tecnologias utilizadas:</span></p>
-              </div>
-            </div>
-          </div>
+          <Cards />
           <Link className={styles.secaoprojetosbtn} href="#">Ver mais</Link>
         </article>
       </section>

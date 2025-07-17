@@ -1,14 +1,32 @@
 import styles from "./cards.module.css";
-import imgprojeto1 from "@/app/assets/projetos/coffeejoy.jpg";
-import imgprojeto2 from "@/app/assets/projetos/casinhas.jpg";
-import imgprojeto3 from "@/app/assets/projetos/beautysalon.jpg";
 import Link from "next/link";
-import Image from "next/image";
 
-export default function Cards() {
+export default function Cards({ imagem, nome, deploy, github }) {
   return (
-    <div className={styles.container_card_projetos}>
+    <div >
       <div className={styles.card_projeto}>
+        <img src={imagem} alt="captura de tela do projeto em execução" />
+        <div className={styles.container_textual}>
+          <h3>{nome}</h3>
+          <div className={styles.container_links}>
+            <Link className={styles.link} href={deploy}>
+              Abrir projeto
+            </Link>
+            <Link
+              className={styles.link}
+              href={github}
+            >
+              Código no GitHub
+            </Link>
+          </div>
+        </div>
+        <ul type="none">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+      {/* <div className={styles.card_projeto}>
         <Image src={imgprojeto1}></Image>
         <div className={styles.container_textual}>
           <h3>Cafeteria CoffeeJoy</h3>
@@ -16,7 +34,6 @@ export default function Cards() {
             <Link className={styles.link} href="https://coffee-joy.vercel.app/">
               Abrir projeto
             </Link>
-            <br />
             <Link
               className={styles.link}
               href="https://github.com/victoriapinheiro/coffee-joy"
@@ -78,7 +95,7 @@ export default function Cards() {
           <li>JavaScript</li>
           <li>React</li>
         </ul>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -1,11 +1,11 @@
-.container_card_projetos {
+/* .container_card_projetos {
     width: 1000px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     gap: 10px;
-}
+} */
 
 .card_projeto {
     width: 330px;
@@ -41,7 +41,8 @@
 .card_projeto .container_textual .container_links {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    gap: 10px;
 }
 
 .card_projeto .container_textual a {

@@ -8,10 +8,11 @@ import icon_linkedin from "./assets/icon-linkedin.png";
 import icon_cv from "./assets/icon-cv.png";
 import Tecnologias from "@/components/Tecnologias";
 import Cards from "@/components/Cards";
+import { colecaoProjetos } from "@/app/dados/colecaoprojetos.js";
+
 
 export default function Home() {
 
-  const [tabAtiva, setTabAtiva] = useState('');
 
   function alterarTabAtiva (idTab) {
     if (tabAtiva !== idTab) {
@@ -49,7 +50,12 @@ export default function Home() {
         <article>
           <h2>PROJETOS</h2>
           <p className={styles.descricao}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula, neque sit amet placerat volutpat, lacus turpis lacinia mauris, vitae varius risus enim et neque. Sed sed interdum eros, ac.</p>
-          <Cards />
+          <div className={styles.container_card_projetos}>
+            { colecaoProjetos.map((projeto) => (
+            <Cards key={projeto.id} nome={projeto.nome} imagem={projeto.imagem} deploy={projeto.deploy} github={projeto.github} />
+          )) }
+          </div>
+          {/* <Cards /> */}
           <Link className={styles.secaoprojetosbtn} href="#">Ver mais</Link>
         </article>
       </section>

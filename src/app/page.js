@@ -27,12 +27,12 @@ export default function Home() {
     <main>
       <section className={styles.secaosobre}>
         <article>
-          <Link href="https://wa.me/5521972175706" title="+55 (21) 97217-5706"><Image className={`${styles.iconlink} ${styles.wpplink}`} src={icon_wpp}></Image></Link>
-          <Link href="https://www.linkedin.com/in/victoriavivian">
-            <Image className={`${styles.iconlink} ${styles.linkedinlink}`} src={icon_linkedin}></Image>
+          <Link href="https://wa.me/5521972175706" title="+55 (21) 97217-5706" target="_blank"><Image className={`${styles.iconlink} ${styles.wpplink}`} src={icon_wpp} alt="Ícone do WhatsApp"></Image></Link>
+          <Link href="https://www.linkedin.com/in/victoriavivian" target="_blank">
+            <Image className={`${styles.iconlink} ${styles.linkedinlink}`} src={icon_linkedin} alt="Ícone do LinkedIn"></Image>
           </Link>
           <Link href="https://drive.google.com/file/d/1vwpzmZbtoa2dTVBdP-TsoL_WDmmktqrU/view?usp=sharing" target="_blank">
-            <Image className={`${styles.iconlink} ${styles.cvlink}`} src={icon_cv}></Image>
+            <Image className={`${styles.iconlink} ${styles.cvlink}`} src={icon_cv} alt="Ícone de Currículo"></Image>
           </Link>
           <h1>QUEM SOU EU?</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent magna arcu, placerat non dapibus eu, viverra ultrices nunc. Donec tempus varius dui, vel aliquet purus laoreet sed. Praesent laoreet leo et nisi consectetur luctus.</p>

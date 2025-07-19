@@ -14,31 +14,31 @@ export default function Home() {
       <div className={styles.tecnologias}>
         <div className={styles.scroller__inner}>
           <div className={styles.scroller__item}>
-            <Image src={html_icon} />
+            <Image src={html_icon} alt="Logo HTML" />
             <figcaption>HTML</figcaption>
           </div>
           <div className={styles.scroller__item}>
-            <Image src={css_icon} />
+            <Image src={css_icon} alt="Logo CSS" />
             <figcaption>CSS</figcaption>
           </div>
           <div className={styles.scroller__item}>
-            <Image src={js_icon} />
+            <Image src={js_icon} alt="Logo JavaScript" />
             <figcaption>JavaScript</figcaption>
           </div>
           <div className={styles.scroller__item}>
-            <Image src={react_icon} />
+            <Image src={react_icon} alt="Logo React" />
             <figcaption>REACT</figcaption>
           </div>
           <div className={styles.scroller__item}>
-            <Image src={nextjs_icon} />
+            <Image src={nextjs_icon} alt="Logo Next.JS" />
             <figcaption>NEXT</figcaption>
           </div>
           <div className={styles.scroller__item}>
-            <Image src={git_icon} />
+            <Image src={git_icon} alt="Logo GIT" />
             <figcaption>GIT</figcaption>
           </div>
           <div className={styles.scroller__item}>
-            <Image src={github_icon} />
+            <Image src={github_icon} alt="Logo GITHUB" />
             <figcaption>GITHUB</figcaption>
           </div>
           <div className={styles.scroller__item}>

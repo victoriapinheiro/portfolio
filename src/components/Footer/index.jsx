@@ -10,9 +10,9 @@ export default function Footer() {
       <footer id="contato">
         <div className={styles.footer}>
           <div className={styles.containerlinks}>
-            <Link href="https://www.linkedin.com/in/victoriavivian"><Image src={linkedin_icon}></Image></Link>
-            <Link href="https://wa.me/5521972175706" title="+55 (21) 97217-5706"><Image src={wpp_icon}></Image></Link>
-            <Link href="mailto:victoriaviviancp@gmail.com" title="victoriaviviancp@gmail.com"><Image src={email_icon}></Image></Link>
+            <Link href="https://www.linkedin.com/in/victoriavivian" target="_blank"><Image src={linkedin_icon} alt="Logo LinkedIn" ></Image></Link>
+            <Link href="https://wa.me/5521972175706" title="+55 (21) 97217-5706" target="_blank"><Image src={wpp_icon} alt="Logo WhatsApp" ></Image></Link>
+            <Link href="mailto:victoriaviviancp@gmail.com" title="victoriaviviancp@gmail.com" target="_blank"><Image src={email_icon} alt="Ícone de Email" ></Image></Link>
           </div>
           <p>Design criado por <Link className={styles.linkspan} href="#">Taylor Miguel</Link></p>
           <p>Desenvolvido por <Link className={styles.linkspan} href="#">Victoria Vivian</Link></p>

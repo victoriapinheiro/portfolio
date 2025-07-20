@@ -1,5 +1,4 @@
 'use client';
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
@@ -12,17 +11,6 @@ import { colecaoProjetos } from "@/app/dados/colecaoprojetos.js";
 
 
 export default function Home() {
-
-
-  function alterarTabAtiva (idTab) {
-    if (tabAtiva !== idTab) {
-      setTabAtiva(idTab);
-    }
-    else {
-      setTabAtiva('');
-    }
-  };
-
   return (
     <main>
       <section className={styles.secaosobre}>
@@ -55,7 +43,6 @@ export default function Home() {
             <Cards key={projeto.id} nome={projeto.nome} imagem={projeto.imagem} deploy={projeto.deploy} github={projeto.github} />
           )) }
           </div>
-          {/* <Cards /> */}
           <Link className={styles.secaoprojetosbtn} href="#">Ver mais</Link>
         </article>
       </section>

@@ -1,7 +1,7 @@
 import styles from "./tecnologias.module.css";
 import { colecaoTecnologias } from "@/app/dados/colecaotecnologias";
 
-export default function Home() {
+export default function Tecnologias() {
   
   const repeticoes = Array.from({ length: 8})
 
